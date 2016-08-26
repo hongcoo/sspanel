@@ -12,6 +12,31 @@
 
     <!-- Main content -->
     <section class="content">
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <i class="fa fa-user"></i>
+
+                        <h3 class="box-title">我的帐号</h3>
+                    </div>
+                    <div class="box-body">
+                        <dl class="dl-horizontal">
+                            <dt>用户名</dt>
+                            <dd>{$user->user_name}</dd>
+                            <dt>邮箱</dt>
+                            <dd>{$user->email}</dd>
+                        </dl>
+
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        </div>
+
         <!-- START PROGRESS BARS -->
         <div class="row">
             <div class="col-md-6">
