@@ -29,16 +29,18 @@
                             <dd>{$user->user_name}</dd>
                             <dt>邮箱</dt>
                             <dd>{$user->email}</dd>
+                            <dt>上次使用</dt>
+                            <dd>{$user->lastSsTime()}</dd>
+                            <dt>账号状态</dt>
+                            <dd>{$user->status()}</dd>
                         </dl>
 
                     </div>
                     <!-- /.box -->
                 </div>
             </div>
-        </div>
 
-        <!-- START PROGRESS BARS -->
-        <div class="row">
+
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
@@ -55,7 +57,41 @@
                 <!-- /.box -->
             </div>
             <!-- /.col (right) -->
+        </div>
 
+        <!-- START PROGRESS BARS -->
+        <div class="row">
+
+
+
+            <!-- /.col (left) -->
+
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <i class="fa fa-pencil"></i>
+
+                        <h3 class="box-title">签到获取流量</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <p> 每{$config['checkinTime']}小时可以签到一次。</p>
+
+                        <p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
+                        {if $user->isAbleToCheckin() }
+                            <p id="checkin-btn">
+                                <button id="checkin" class="btn btn-success  btn-flat">签到</button>
+                            </p>
+                        {else}
+                            <p><a class="btn btn-success btn-flat disabled" href="#">不能签到</a></p>
+                        {/if}
+                        <p id="checkin-msg"></p>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col (right) -->
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-header">
@@ -89,34 +125,6 @@
                 </div>
                 <!-- /.box -->
             </div>
-            <!-- /.col (left) -->
-
-            <div class="col-md-6">
-                <div class="box box-primary">
-                    <div class="box-header">
-                        <i class="fa fa-pencil"></i>
-
-                        <h3 class="box-title">签到获取流量</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <p> 每{$config['checkinTime']}小时可以签到一次。</p>
-
-                        <p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
-                        {if $user->isAbleToCheckin() }
-                            <p id="checkin-btn">
-                                <button id="checkin" class="btn btn-success  btn-flat">签到</button>
-                            </p>
-                        {else}
-                            <p><a class="btn btn-success btn-flat disabled" href="#">不能签到</a></p>
-                        {/if}
-                        <p id="checkin-msg"></p>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->
 
             <div class="col-md-6">
                 <div class="box box-primary">
@@ -134,8 +142,7 @@
                             <dd>{$user->passwd}</dd>
                             <dt>自定义加密方式</dt>
                             <dd>{$user->method}</dd>
-                            <dt>上次使用</dt>
-                            <dd>{$user->lastSsTime()}</dd>
+
                         </dl>
                     </div>
                     <!-- /.box-body -->

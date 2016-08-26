@@ -47,10 +47,19 @@ class User extends Model
         return $this->attributes['is_admin'];
     }
 
+    public function status()
+    {
+        if ($this->attributes['enable'] == 0){
+            return "流量已用完或者账号已到期，请充值";
+        }else{
+            return "使用中";
+        }
+    }
+
     public function lastSsTime()
     {
         if ($this->attributes['t'] == 0) {
-            return "从未使用喵";
+            return "从未使用";
         }
         return Tools::toDateTime($this->attributes['t']);
     }
