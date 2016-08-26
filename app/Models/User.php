@@ -56,6 +56,13 @@ class User extends Model
         }
     }
 
+    public function userLevel()
+    {
+        $level = $this->attributes['level'];
+        $levelinfo = UserLevel::where('level',$level)->get();
+        return $levelinfo[0]['name'];
+    }
+
     public function lastSsTime()
     {
         if ($this->attributes['t'] == 0) {

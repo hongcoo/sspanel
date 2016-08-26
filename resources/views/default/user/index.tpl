@@ -33,6 +33,8 @@
                             <dd>{$user->lastSsTime()}</dd>
                             <dt>账号状态</dt>
                             <dd>{$user->status()}</dd>
+                            <dt>用户等级</dt>
+                            <dd>{$user->userLevel()}</dd>
                         </dl>
 
                     </div>
