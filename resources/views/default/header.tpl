@@ -14,7 +14,7 @@
     <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">{$config["appName"]}</a>
         <ul class="right hide-on-med-and-down">
             <li><a href="/">首页</a></li>
-            <li><a href="http://www.weikeyan.com/?p=81">客户端下载及使用教程</a></li>
+            <li><a href="http://www.weikeyan.com/?p=81" target="_blank">客户端下载及使用教程</a></li>
             <li><a href="/code">邀请码</a></li>
             {if $user->isLogin}
                 <li><a href="/user">用户中心</a></li>
