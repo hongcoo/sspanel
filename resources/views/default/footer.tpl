@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col l6 s12">
-				<h5 class="white-text">关于</h5>
-				<p class="grey-text text-lighten-4">本站提供某种帐号用于科学上网.</p>
+				<h5 class="white-text">关于我们</h5>
+				<p class="grey-text text-lighten-4">本站只提供基于学术科研的上网账号，请在法律允许内使用</p>
 
 
 			</div>
@@ -30,8 +30,7 @@
 	</div>
 	<div class="footer-copyright">
 		<div class="container">
-			&copy; {$config["appName"]}  Powered by <a class="orange-text text-lighten-3" href="https://github.com/orvice/ss-panel">ss-panel</a> {$config["version"]}
-		 Theme by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			&copy; {$config["appName"]}  Powered by <a class="orange-text text-lighten-3" href="https://github.com/hongcoo/sspanel">ss-panel</a> {$config["version"]}
 		</div>
 		<div style="display:none;">
 			{$analyticsCode}

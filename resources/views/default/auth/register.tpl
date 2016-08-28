@@ -6,7 +6,7 @@
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">注册，然后变成一只猫。</p>
+        <p class="login-box-msg">账号注册</p>
 
         <div class="form-group has-feedback">
             <input type="text" id="name" class="form-control" placeholder="昵称"/>
@@ -63,7 +63,7 @@
             <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
             <p id="msg-error-p"></p>
         </div>
-
+        <a href="/code" target="_blank" class="text-center">没有邀请码，点击获取</a>
         <a href="/auth/login" class="text-center">已经注册？请登录</a>
     </div><!-- /.form-box -->
 </div><!-- /.register-box -->
