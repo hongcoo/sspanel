@@ -44,6 +44,7 @@
             <span class="glyphicon glyphicon-send form-control-feedback"></span>
         </div>
 
+        <a href="/code" target="_blank" class="text-center">没有邀请码?点击获取</a><br>
         <div class="form-group has-feedback">
             <p>注册即代表同意<a href="/tos">服务条款</a></p>
         </div>
@@ -63,7 +64,7 @@
             <h4><i class="icon fa fa-warning"></i> 出错了!</h4>
             <p id="msg-error-p"></p>
         </div>
-        <a href="/code" target="_blank" class="text-center">没有邀请码，点击获取</a>
+
         <a href="/auth/login" class="text-center">已经注册？请登录</a>
     </div><!-- /.form-box -->
 </div><!-- /.register-box -->
